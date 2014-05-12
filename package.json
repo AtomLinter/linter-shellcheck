@@ -1,0 +1,14 @@
+{
+  "name": "linter-shellcheck",
+  "linter-package": true,
+  "activationEvents": [],
+  "main": "./lib/init",
+  "version": "0.0.2",
+  "description": "Lint Bash on the fly, using shellcheck (not yet ready)",
+  "repository": "https://github.com/AtomLinter/linter-shellcheck",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}

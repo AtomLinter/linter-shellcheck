@@ -1,4 +1,4 @@
-linter-json
+linter-shellcheck
 =========================
 
 This linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to [shellcheck](https://github.com/koalaman/shellcheck). It will be used with files that have the "Shell" syntax.

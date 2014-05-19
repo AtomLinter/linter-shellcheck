@@ -4,7 +4,7 @@
   "activationEvents": [],
   "main": "./lib/init",
   "version": "0.0.3",
-  "description": "Lint Bash on the fly, using shellcheck (not yet ready)",
+  "description": "Lint Bash on the fly, using shellcheck",
   "repository": "https://github.com/AtomLinter/linter-shellcheck",
   "license": "MIT",
   "engines": {

@@ -1,6 +1,6 @@
 module.exports =
   configDefaults:
-    shellcheckExecutablePath: null
+    shellcheckExecutablePath: process.env.PATH
 
   activate: ->
     console.log 'activate linter-shellcheck'

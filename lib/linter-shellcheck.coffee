@@ -22,10 +22,11 @@ class LinterShellcheck extends Linter
   constructor: (editor)->
     super(editor)
 
-    atom.config.observe 'linter-shellcheck.shellcheckExecutablePath', =>
+    @configSubscription = atom.config.observe 'linter-shellcheck.shellcheckExecutablePath', =>
       @executablePath = atom.config.get 'linter-shellcheck.shellcheckExecutablePath'
 
   destroy: ->
-    atom.config.unobserve 'linter-shellcheck.shellcheckExecutablePath'
+    super
+    @configSubscription.dispose()
 
 module.exports = LinterShellcheck

@@ -2,7 +2,7 @@
   "name": "linter-shellcheck",
   "linter-package": true,
   "main": "./lib/init",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Lint Bash on the fly, using shellcheck",
   "repository": "https://github.com/AtomLinter/linter-shellcheck",
   "license": "MIT",

@@ -1,7 +1,6 @@
 {
   "name": "linter-shellcheck",
   "linter-package": true,
-  "activationEvents": [],
   "main": "./lib/init",
   "version": "0.0.7",
   "description": "Lint Bash on the fly, using shellcheck",

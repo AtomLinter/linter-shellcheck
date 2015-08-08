@@ -29,9 +29,9 @@ module.exports =
     provider =
       grammarScopes: ['source.shell']
       scope: 'file'
-      lintOnFly: true
+      lintOnFly: false
       lint: (textEditor) =>
-        filePath =  textEditor.getPath()
+        filePath = textEditor.getPath()
         showAll = @enableNotice
         parameters = ['-f', 'gcc', filePath ]
         return helpers.exec(@executablePath, parameters).then (output) ->

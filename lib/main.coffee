@@ -13,7 +13,8 @@ module.exports =
 
   activate: ->
     @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.config.observe 'linter-shellcheck.shellcheckExecutablePath',
+    @subscriptions.add atom.config.observe \
+     'linter-shellcheck.shellcheckExecutablePath',
       (executablePath) =>
         @executablePath = executablePath
     @subscriptions.add atom.config.observe 'linter-shellcheck.enableNotice',

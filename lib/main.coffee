@@ -32,14 +32,14 @@ module.exports =
       lint: (textEditor) =>
         filePath = textEditor.getPath()
         command = @executablePath
-        ennote = @enableNotice
+        showAll = @enableNotice
         parameters = []
         parameters.push('-f', 'gcc', filePath)
         return helpers.exec(command, parameters).then (output) ->
           regex = /.+?:(\d+):(\d+):\s(\w+?):\s(.+)/g
           messages = []
           while((match = regex.exec(output)) isnt null)
-            if ennote or match[3] == "warning" or match[3] == "error"
+            if showAll or match[3] == "warning" or match[3] == "error"
               lineStart = match[1] - 1
               colStart = match[2] - 1
               lineEnd = match[1] - 1

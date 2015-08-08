@@ -31,12 +31,10 @@ module.exports =
       scope: 'file'
       lintOnFly: true
       lint: (textEditor) =>
-        filePath = textEditor.getPath()
-        command = @executablePath
+        filePath =  textEditor.getPath()
         showAll = @enableNotice
-        parameters = []
-        parameters.push('-f', 'gcc', filePath)
-        return helpers.exec(command, parameters).then (output) ->
+        parameters = ['-f', 'gcc', filePath ]
+        return helpers.exec(@executablePath, parameters).then (output) ->
           regex = /.+?:(\d+):(\d+):\s(\w+?):\s(.+)/g
           messages = []
           while((match = regex.exec(output)) isnt null)

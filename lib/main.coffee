@@ -2,7 +2,7 @@
 
 module.exports =
   config:
-    executablePath:
+    shellcheckExecutablePath:
       type: 'string'
       title: 'Shellcheck Executable Path'
       default: 'shellcheck' # Let OS's $PATH handle the rest
@@ -13,7 +13,7 @@ module.exports =
 
   activate: ->
     @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.config.observe 'linter-shellcheck.executablePath',
+    @subscriptions.add atom.config.observe 'linter-shellcheck.shellcheckExecutablePath',
       (executablePath) =>
         @executablePath = executablePath
     @subscriptions.add atom.config.observe 'linter-shellcheck.enableNotice',

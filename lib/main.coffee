@@ -29,12 +29,14 @@ module.exports =
     provider =
       grammarScopes: ['source.shell']
       scope: 'file'
-      lintOnFly: false
+      lintOnFly: true
       lint: (textEditor) =>
         filePath = textEditor.getPath()
+        text = textEditor.getText()
         showAll = @enableNotice
-        parameters = ['-f', 'gcc', filePath ]
-        return helpers.exec(@executablePath, parameters).then (output) ->
+        parameters = ['-f', 'gcc', '-' ]
+        return helpers.exec(@executablePath, parameters,
+         {stdin: text}).then (output) ->
           regex = /.+?:(\d+):(\d+):\s(\w+?):\s(.+)/g
           messages = []
           while((match = regex.exec(output)) isnt null)

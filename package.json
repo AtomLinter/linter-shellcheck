@@ -1,13 +1,22 @@
 {
   "name": "linter-shellcheck",
   "linter-package": true,
-  "main": "./lib/init",
-  "version": "0.0.8",
+  "main": "./lib/main",
+  "version": "0.0.9",
   "description": "Lint Bash on the fly, using shellcheck",
   "repository": "https://github.com/AtomLinter/linter-shellcheck",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">0.180.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "atom-linter": "^3.0.0"
+  },  
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  }
 }

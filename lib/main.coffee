@@ -8,7 +8,7 @@ module.exports =
       default: 'shellcheck' # Let OS's $PATH handle the rest
     excludedErrorCodes:
       title: 'Excluded Error Codes'
-      description: 'Comma-seperated list of error codes to be ignored: SC2068,SC2069,...'
+      description: 'Comma-separated list of error codes to be ignored: SC2068,SC2069,...'
       type: 'array'
       default: []
       items:

@@ -45,7 +45,7 @@ module.exports =
         filePath = textEditor.getPath()
         text = textEditor.getText()
         showAll = @enableNotice
-        parameters = ['-f', 'gcc', '-']
+        parameters = [ '-f', 'gcc', '-']
 
         # if excluded codes are set
         if @excludedErrorCodes.length > 0

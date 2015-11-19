@@ -32,11 +32,12 @@ module.exports =
       lintOnFly: true
       lint: (textEditor) =>
         filePath = textEditor.getPath()
+        fileProject = atom.project.relativizePath(filePath)[0]
         text = textEditor.getText()
         showAll = @enableNotice
-        parameters = ['-f', 'gcc', '-' ]
+        parameters = [ '-x', '-f', 'gcc', '-' ]
         return helpers.exec(@executablePath, parameters,
-         {stdin: text}).then (output) ->
+         {stdin: text, cwd: fileProject}).then (output) ->
           regex = /.+?:(\d+):(\d+):\s(\w+?):\s(.+)/g
           messages = []
           while((match = regex.exec(output)) isnt null)

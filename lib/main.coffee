@@ -6,6 +6,11 @@ module.exports =
       type: 'string'
       title: 'Shellcheck Executable Path'
       default: 'shellcheck' # Let OS's $PATH handle the rest
+    userParameters:
+      type: 'string'
+      title: 'Additional Executable Parameters'
+      description:
+        'Additional shellcheck parameters, for example `-x -e SC1090`.'
     enableNotice:
       type: 'boolean'
       title: 'Enable Notice Messages'
@@ -20,6 +25,9 @@ module.exports =
     @subscriptions.add atom.config.observe 'linter-shellcheck.enableNotice',
       (enableNotice) =>
         @enableNotice = enableNotice
+    @subscriptions.add atom.config.observe 'linter-shellcheck.userParameters',
+      (userParameters) =>
+        @userParameters = userParameters.trim().split(' ').filter(Boolean)
 
   deactivate: ->
     @subscriptions.dispose()
@@ -34,7 +42,8 @@ module.exports =
         filePath = textEditor.getPath()
         text = textEditor.getText()
         showAll = @enableNotice
-        parameters = ['-f', 'gcc', '-' ]
+        # the first -f parameter overrides any others
+        parameters = [].concat ['-f', 'gcc'], @userParameters, ['-']
         return helpers.exec(@executablePath, parameters,
           {stdin: text}).then (output) ->
             regex = /.+?:(\d+):(\d+):\s(\w+?):\s(.+)/g

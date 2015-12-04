@@ -21,6 +21,7 @@ You can configure linter-json by editing ~/.atom/config.cson (choose Open Your C
 ```
 'linter-shellcheck':
   'shellcheckExecutablePath': null #shellcheck path. run 'which shellcheck' to find the path
+  'userParameters': any additional executable parameters to pass to shellcheck
 ```
 
 ## Contributing

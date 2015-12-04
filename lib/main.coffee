@@ -10,6 +10,11 @@ module.exports =
       type: 'boolean'
       title: 'Enable Notice Messages'
       default: false
+    enableFixPath:
+      type: 'boolean'
+      title: 'Enable fix-path'
+      description: 'Fix the `$PATH` on OS X when Atom is run from a GUI app.'
+      default: process.platform is 'darwin'
 
   activate: ->
     @subscriptions = new CompositeDisposable
@@ -20,6 +25,10 @@ module.exports =
     @subscriptions.add atom.config.observe 'linter-shellcheck.enableNotice',
       (enableNotice) =>
         @enableNotice = enableNotice
+    @subscriptions.add atom.config.observe 'linter-shellcheck.enableFixPath',
+      (enableFixPath) ->
+        # can not reverse fix-path once loaded
+        require('fix-path')() if enableFixPath
 
   deactivate: ->
     @subscriptions.dispose()

@@ -6,6 +6,13 @@ module.exports =
       type: 'string'
       title: 'Shellcheck Executable Path'
       default: 'shellcheck' # Let OS's $PATH handle the rest
+    excludedErrorCodes:
+      title: 'Excluded Error Codes'
+      description: 'Comma-separated list of error codes to be ignored: SC2068,SC2069,...'
+      type: 'array'
+      default: []
+      items:
+        type: 'string'
     enableNotice:
       type: 'boolean'
       title: 'Enable Notice Messages'
@@ -17,6 +24,10 @@ module.exports =
      'linter-shellcheck.shellcheckExecutablePath',
       (executablePath) =>
         @executablePath = executablePath
+    @subscriptions.add atom.config.observe \
+      'linter-shellcheck.excludedErrorCodes',
+      (excludedErrorCodes) =>
+        @excludedErrorCodes = excludedErrorCodes
     @subscriptions.add atom.config.observe 'linter-shellcheck.enableNotice',
       (enableNotice) =>
         @enableNotice = enableNotice
@@ -34,7 +45,13 @@ module.exports =
         filePath = textEditor.getPath()
         text = textEditor.getText()
         showAll = @enableNotice
-        parameters = ['-f', 'gcc', '-' ]
+        parameters = ['-f', 'gcc', '-']
+
+        # if excluded codes are set
+        if @excludedErrorCodes.length > 0
+          # then add a "--exclude" element to parameters array
+          parameters.push '--exclude=' + @excludedErrorCodes.join ','
+
         return helpers.exec(@executablePath, parameters,
           {stdin: text}).then (output) ->
             regex = /.+?:(\d+):(\d+):\s(\w+?):\s(.+)/g

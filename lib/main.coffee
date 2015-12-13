@@ -11,6 +11,7 @@ module.exports =
       title: 'Additional Executable Parameters'
       description:
         'Additional shellcheck parameters, for example `-x -e SC1090`.'
+      default: ''
     enableNotice:
       type: 'boolean'
       title: 'Enable Notice Messages'

@@ -34,6 +34,7 @@ module.exports =
 
   provideLinter: ->
     helpers = require('atom-linter')
+    path = require('path')
     provider =
       grammarScopes: ['source.shell']
       scope: 'file'
@@ -41,11 +42,12 @@ module.exports =
       lint: (textEditor) =>
         filePath = textEditor.getPath()
         text = textEditor.getText()
+        cwd = path.dirname(filePath)
         showAll = @enableNotice
         # the first -f parameter overrides any others
         parameters = [].concat ['-f', 'gcc'], @userParameters, ['-']
         return helpers.exec(@executablePath, parameters,
-          {stdin: text}).then (output) ->
+          {stdin: text, cwd: cwd}).then (output) ->
             regex = /.+?:(\d+):(\d+):\s(\w+?):\s(.+)/g
             messages = []
             while((match = regex.exec(output)) isnt null)

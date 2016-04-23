@@ -1,5 +1,11 @@
 {CompositeDisposable} = require 'atom'
 
+baseUrl = "https://github.com/koalaman/shellcheck/wiki"
+errorCodeRegex = /SC\d{4}/
+
+linkifyErrorCode = (text) ->
+  text.replace(errorCodeRegex, "<a href=\"#{baseUrl}/$&\">$&</a>")
+
 module.exports =
   config:
     shellcheckExecutablePath:
@@ -61,5 +67,5 @@ module.exports =
                   type: match[3]
                   filePath: filePath
                   range: [ [lineStart, colStart], [lineEnd, colEnd] ]
-                  text: match[4]
+                  html: linkifyErrorCode(match[4])
             return messages

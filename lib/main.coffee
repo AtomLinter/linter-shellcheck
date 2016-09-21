@@ -43,6 +43,7 @@ module.exports =
     helpers = require('atom-linter')
     path = require('path')
     provider =
+      name: 'shellcheck'
       grammarScopes: ['source.shell']
       scope: 'file'
       lintOnFly: true

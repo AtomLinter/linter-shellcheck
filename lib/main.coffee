@@ -54,8 +54,9 @@ module.exports =
         showAll = @enableNotice
         # the first -f parameter overrides any others
         parameters = [].concat ['-f', 'gcc'], @userParameters, ['-']
-        return helpers.exec(@executablePath, parameters,
-          {stdin: text, cwd: cwd}).then (output) ->
+        options = {stdin: text, cwd, ignoreExitCode: true}
+        return helpers.exec(@executablePath, parameters, options)
+          .then (output) ->
             regex = /.+?:(\d+):(\d+):\s(\w+?):\s(.+)/g
             messages = []
             while((match = regex.exec(output)) isnt null)

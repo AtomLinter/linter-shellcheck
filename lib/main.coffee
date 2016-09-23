@@ -24,6 +24,8 @@ module.exports =
       default: false
 
   activate: ->
+    require('atom-package-deps').install('linter-shellcheck')
+
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.config.observe \
      'linter-shellcheck.shellcheckExecutablePath',

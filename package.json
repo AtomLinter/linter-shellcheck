@@ -14,11 +14,15 @@
     "lint": "coffeelint lib"
   },
   "dependencies": {
-    "atom-linter": "^8.0.0"
+    "atom-linter": "^8.0.0",
+    "atom-package-deps": "^4.3.1"
   },
   "devDependencies": {
     "coffeelint": "^1.15.7"
   },
+  "package-deps": [
+    "linter"
+  ],
   "providedServices": {
     "linter": {
       "versions": {

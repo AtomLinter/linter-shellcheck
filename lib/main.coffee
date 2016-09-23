@@ -67,7 +67,7 @@ module.exports =
                 col = match[2] - 1
                 messages.push
                   type: match[3]
-                  filePath
+                  filePath: filePath
                   range: helpers.rangeFromLineNumber(textEditor, line, col)
                   html: linkifyErrorCode(match[4])
             return messages

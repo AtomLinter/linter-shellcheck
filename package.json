@@ -9,8 +9,15 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "scripts": {
+    "test": "apm test",
+    "lint": "coffeelint lib"
+  },
   "dependencies": {
     "atom-linter": "^8.0.0"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.15.7"
   },
   "providedServices": {
     "linter": {

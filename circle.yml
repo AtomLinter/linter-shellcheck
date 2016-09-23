@@ -1,0 +1,31 @@
+test:
+  override:
+    - echo $PATH
+    - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
+    - chmod u+x build-package.sh
+    - shellcheck --version
+    - ./build-package.sh
+
+dependencies:
+  override:
+    # # Now update APT
+    # - sudo apt-get update
+    # # And install shellcheck
+    # - sudo apt-get install shellcheck
+    - cabal update
+    - cabal install shellcheck
+  cache_directories:
+    - "~/.cabal"
+
+machine:
+  environment:
+    PATH: "$HOME/.cabal/bin:$PATH"
+  # Although this ensures that `shellcheck` is easily installed from APT, the
+  # version currently installed (v0.3.3) is too old to get the desired output
+  # for the specs. As such we are using the Cabal installation which takes
+  # ~8 minutes due to how terrible Cabal is at caching.
+  # pre:
+  #   # Ensure trusty-backports is in the list
+  #   - echo "deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+  ghc:
+    version: 7.10.2

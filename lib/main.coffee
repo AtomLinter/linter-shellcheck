@@ -61,13 +61,11 @@ module.exports =
             messages = []
             while((match = regex.exec(output)) isnt null)
               if showAll or match[3] == "warning" or match[3] == "error"
-                lineStart = match[1] - 1
-                colStart = match[2] - 1
-                lineEnd = match[1] - 1
-                colEnd = textEditor.getBuffer().lineLengthForRow(lineStart)
+                line = match[1] - 1
+                col = match[2] - 1
                 messages.push
                   type: match[3]
-                  filePath: filePath
-                  range: [ [lineStart, colStart], [lineEnd, colEnd] ]
+                  filePath
+                  range: helpers.rangeFromLineNumber(textEditor, line, col)
                   html: linkifyErrorCode(match[4])
             return messages

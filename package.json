@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "apm test",
-    "lint": "coffeelint lib"
+    "lint": "coffeelint lib && eslint spec"
   },
   "dependencies": {
     "atom-linter": "^8.0.0",

@@ -6,7 +6,7 @@ const cleanPath = path.join(__dirname, 'fixtures', 'clean.sh');
 const badPath = path.join(__dirname, 'fixtures', 'bad.sh');
 
 describe('The ShellCheck provider for Linter', () => {
-  const lint = require(path.join('..', 'lib', 'main.coffee')).provideLinter().lint;
+  const lint = require('../lib/main.coffee').provideLinter().lint;
 
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();

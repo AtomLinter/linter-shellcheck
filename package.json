@@ -1,17 +1,34 @@
 {
   "name": "linter-shellcheck",
-  "linter-package": true,
-  "main": "./lib/main",
+  "main": "./lib/main.js",
   "version": "1.4.0",
   "description": "Lint Bash on the fly, using shellcheck",
   "repository": "https://github.com/AtomLinter/linter-shellcheck",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.4.0 <2.0.0"
   },
   "scripts": {
     "test": "apm test",
-    "lint": "coffeelint lib && eslint spec"
+    "lint": "eslint ."
+  },
+  "configSchema": {
+    "shellcheckExecutablePath": {
+      "type": "string",
+      "title": "Shellcheck Executable Path",
+      "default": "shellcheck"
+    },
+    "userParameters": {
+      "type": "string",
+      "title": "Additional Executable Parameters",
+      "description": "Additional shellcheck parameters, for example `-x -e SC1090`.",
+      "default": ""
+    },
+    "enableNotice": {
+      "type": "boolean",
+      "title": "Enable Notice Messages",
+      "default": false
+    }
   },
   "dependencies": {
     "atom-linter": "^8.0.0",

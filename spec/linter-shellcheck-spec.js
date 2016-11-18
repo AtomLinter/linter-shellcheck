@@ -11,19 +11,15 @@ describe('The ShellCheck provider for Linter', () => {
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();
 
-    // This whole beforeEach function is inspired by:
-    // https://github.com/AtomLinter/linter-jscs/pull/295/files
-    //
-    // See also:
-    // https://discuss.atom.io/t/activationhooks-break-unit-tests/36028/8
+    // Info about this beforeEach() implementation:
+    // https://github.com/AtomLinter/Meta/issues/15
     const activationPromise =
       atom.packages.activatePackage('linter-shellcheck');
 
     waitsForPromise(() =>
-      atom.packages.activatePackage('language-shellscript'));
-
-    waitsForPromise(() =>
-      atom.workspace.open(cleanPath));
+      atom.packages.activatePackage('language-shellscript').then(() =>
+        atom.workspace.open(cleanPath))
+    );
 
     atom.packages.triggerDeferredActivationHooks();
     waitsForPromise(() => activationPromise);

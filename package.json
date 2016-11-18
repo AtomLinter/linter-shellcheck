@@ -8,6 +8,7 @@
   "engines": {
     "atom": ">=1.4.0 <2.0.0"
   },
+  "activationHooks": ["language-shellscript:grammar-used"],
   "scripts": {
     "test": "apm test",
     "lint": "eslint ."

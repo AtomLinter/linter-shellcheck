@@ -18,7 +18,7 @@ describe('The ShellCheck provider for Linter', () => {
 
     waitsForPromise(() =>
       atom.packages.activatePackage('language-shellscript').then(() =>
-        atom.workspace.open(cleanPath))
+        atom.workspace.open(cleanPath)),
     );
 
     atom.packages.triggerDeferredActivationHooks();
@@ -29,7 +29,7 @@ describe('The ShellCheck provider for Linter', () => {
     waitsForPromise(() =>
       atom.workspace.open(cleanPath).then(editor => lint(editor)).then((messages) => {
         expect(messages.length).toBe(0);
-      })
+      }),
     );
   });
 
@@ -44,7 +44,7 @@ describe('The ShellCheck provider for Linter', () => {
         expect(messages[0].html).toBe(expectedMsg);
         expect(messages[0].filePath).toBe(badPath);
         expect(messages[0].range).toEqual([[0, 0], [0, 4]]);
-      })
+      }),
     );
   });
 });

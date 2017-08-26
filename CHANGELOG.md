@@ -1,5 +1,18 @@
 # Change Log
 
+## [v1.4.5](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.5) (2017-08-26)
+[Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.4...v1.4.5)
+
+**Implemented enhancements:**
+
+- Update eslint to version 4.3.0 🚀 [\#99](https://github.com/AtomLinter/linter-shellcheck/pull/99) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update atom-linter to version 10.0.0 🚀 [\#97](https://github.com/AtomLinter/linter-shellcheck/pull/97) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
+**Fixed bugs:**
+
+- Shellcheck linter reports Warning as Error [\#96](https://github.com/AtomLinter/linter-shellcheck/issues/96)
+- Treat messages of level `note` as info [\#101](https://github.com/AtomLinter/linter-shellcheck/pull/101) ([lucasdf](https://github.com/lucasdf))
+
 ## [v1.4.4](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.4) (2017-03-18)
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.3...v1.4.4)
 

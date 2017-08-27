@@ -1,5 +1,13 @@
 # Change Log
 
+## [v1.4.6](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.6) (2017-08-27)
+[Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.5...v1.4.6)
+
+**Fixed bugs:**
+
+- shellcheck doesn't support zsh [\#95](https://github.com/AtomLinter/linter-shellcheck/issues/95)
+- Ignore zsh files [\#102](https://github.com/AtomLinter/linter-shellcheck/pull/102) ([lucasdf](https://github.com/lucasdf))
+
 ## [v1.4.5](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.5) (2017-08-26)
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.4...v1.4.5)
 

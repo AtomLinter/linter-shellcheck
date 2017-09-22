@@ -6,7 +6,7 @@ const cleanPath = path.join(__dirname, 'fixtures', 'clean.sh');
 const badPath = path.join(__dirname, 'fixtures', 'bad.sh');
 
 describe('The ShellCheck provider for Linter', () => {
-  const lint = require('../lib/main.js').provideLinter().lint;
+  const { lint } = require('../lib/main.js').provideLinter();
 
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();
@@ -18,8 +18,7 @@ describe('The ShellCheck provider for Linter', () => {
 
     waitsForPromise(() =>
       atom.packages.activatePackage('language-shellscript').then(() =>
-        atom.workspace.open(cleanPath)),
-    );
+        atom.workspace.open(cleanPath)));
 
     atom.packages.triggerDeferredActivationHooks();
     waitsForPromise(() => activationPromise);
@@ -29,8 +28,7 @@ describe('The ShellCheck provider for Linter', () => {
     waitsForPromise(() =>
       atom.workspace.open(cleanPath).then(editor => lint(editor)).then((messages) => {
         expect(messages.length).toBe(0);
-      }),
-    );
+      }));
   });
 
   it('handles messages from ShellCheck', () => {
@@ -44,7 +42,6 @@ describe('The ShellCheck provider for Linter', () => {
         expect(messages[0].html).toBe(expectedMsg);
         expect(messages[0].filePath).toBe(badPath);
         expect(messages[0].range).toEqual([[0, 0], [0, 4]]);
-      }),
-    );
+      }));
   });
 });

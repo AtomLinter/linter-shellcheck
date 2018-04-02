@@ -1,0 +1,5 @@
+user=AtomLinter
+project=linter-shellcheck
+unreleased=false
+future-release=v1.4.7
+exclude_labels=duplicate,question,invalid,wontfix,Duplicate,Question,Invalid,Wontfix,External

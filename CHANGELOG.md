@@ -1,5 +1,20 @@
 # Change Log
 
+## [v1.4.7](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.7) (2018-04-02)
+
+[Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.6...v1.4.7)
+
+**Implemented enhancements:**
+
+- Asyncify the specs [\#106](https://github.com/AtomLinter/linter-shellcheck/pull/106) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint-config-airbnb-base to version 12.0.0 🚀 [\#103](https://github.com/AtomLinter/linter-shellcheck/pull/103) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
+**Fixed bugs:**
+
+- Object.extname is deprecated. [\#108](https://github.com/AtomLinter/linter-shellcheck/issues/108)
+- Object.dirname is deprecated. [\#107](https://github.com/AtomLinter/linter-shellcheck/issues/107)
+- Verify valid TextEditor and path [\#109](https://github.com/AtomLinter/linter-shellcheck/pull/109) ([Arcanemagus](https://github.com/Arcanemagus))
+
 ## [v1.4.6](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.6) (2017-08-27)
 
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.5...v1.4.6)

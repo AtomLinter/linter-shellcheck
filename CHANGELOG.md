@@ -1,5 +1,14 @@
 # Change Log
 
+## [v1.5.0](https://github.com/AtomLinter/linter-shellcheck/tree/v1.5.0) (2018-08-23)
+
+[Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.7...v1.5.0)
+
+**Implemented enhancements:**
+
+- Relative paths in source directives [\#117](https://github.com/AtomLinter/linter-shellcheck/issues/117)
+- Allow ShellCheck `source=` directive to be relative to project root instead of file path [\#124](https://github.com/AtomLinter/linter-shellcheck/pull/124) ([tbehling](https://github.com/tbehling))
+
 ## [v1.4.7](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.7) (2018-04-02)
 
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.6...v1.4.7)

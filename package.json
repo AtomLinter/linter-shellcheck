@@ -31,6 +31,12 @@
       "type": "boolean",
       "title": "Enable Notice Messages",
       "default": false
+    },
+    "useProjectCwd": {
+      "type": "boolean",
+      "title": "Run ShellCheck relative to Project Root",
+      "description": "Enable to run ShellCheck using the project root as its working directory; causes ShellCheck to interpret `source=` paths relative to the project root.  Disable to keep `source=` paths relative to the file.",
+      "default": false
     }
   },
   "dependencies": {

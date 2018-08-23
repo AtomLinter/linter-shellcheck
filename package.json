@@ -34,7 +34,8 @@
     },
     "useProjectCwd": {
       "type": "boolean",
-      "title": "Run Shellcheck using project root as the working directory (false for file-relative)",
+      "title": "Run ShellCheck relative to Project Root",
+      "description": "Enable to run ShellCheck using the project root as its working directory; causes ShellCheck to interpret `source=` paths relative to the project root.  Disable to keep `source=` paths relative to the file.",
       "default": false
     }
   },

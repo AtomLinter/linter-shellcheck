@@ -34,5 +34,17 @@ Run `which shellcheck` to find where it is installed on your system.
 *   `userParameters`: Any additional executable parameters to pass to
 `shellcheck` when linting your files.
 
+*   `enableNotice`: Include lesser-importance ShellCheck messages
+(default: false).
+
+*   `useProjectCwd`: Controls whether the paths used by ShellCheck's
+[`source=`](https://github.com/koalaman/shellcheck/wiki/Directive#source)
+directive are relative to the project root or the file (default: false, for file-relative)
+    *   If true, ShellCheck's working directory
+    will be the project's root directory.  Any `source=` directives will be
+    interpreted relative to the project root.
+    *   Otherwise, ShellCheck will run relative to the file's directory,
+    making `source=` directives file-relative.
+
 [linter]: https://github.com/atom-community/linter "Linter"
 [shellcheck]: https://github.com/koalaman/shellcheck "ShellCheck"

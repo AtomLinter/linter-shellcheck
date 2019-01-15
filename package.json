@@ -1,7 +1,7 @@
 {
   "name": "linter-shellcheck",
   "main": "./lib/main.js",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Lint Bash on the fly, using shellcheck",
   "repository": "https://github.com/AtomLinter/linter-shellcheck",
   "license": "MIT",

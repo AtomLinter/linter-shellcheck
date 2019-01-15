@@ -1,7 +1,20 @@
 # Change Log
 
-## [v1.5.0](https://github.com/AtomLinter/linter-shellcheck/tree/v1.5.0) (2018-08-23)
+## [v1.6.0](https://github.com/AtomLinter/linter-shellcheck/tree/v1.6.0) (2019-01-15)
+[Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.5.0...v1.6.0)
 
+**Fixed bugs:**
+
+- Support v2 Linter API [\#127](https://github.com/AtomLinter/linter-shellcheck/issues/127)
+- Migrate CircleCI to a 2.0 configuration [\#116](https://github.com/AtomLinter/linter-shellcheck/issues/116)
+- Upgrade to CircleCI 2.0 [\#125](https://github.com/AtomLinter/linter-shellcheck/pull/125) ([Arcanemagus](https://github.com/Arcanemagus))
+
+**Merged pull requests:**
+
+- Linter v2 Update [\#128](https://github.com/AtomLinter/linter-shellcheck/pull/128) ([richardbann](https://github.com/richardbann))
+- Update atom-package-deps to version 5.0.0 🚀 [\#126](https://github.com/AtomLinter/linter-shellcheck/pull/126) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
+## [v1.5.0](https://github.com/AtomLinter/linter-shellcheck/tree/v1.5.0) (2018-08-23)
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.7...v1.5.0)
 
 **Implemented enhancements:**
@@ -10,7 +23,6 @@
 - Allow ShellCheck `source=` directive to be relative to project root instead of file path [\#124](https://github.com/AtomLinter/linter-shellcheck/pull/124) ([tbehling](https://github.com/tbehling))
 
 ## [v1.4.7](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.7) (2018-04-02)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.6...v1.4.7)
 
 **Implemented enhancements:**
@@ -25,7 +37,6 @@
 - Verify valid TextEditor and path [\#109](https://github.com/AtomLinter/linter-shellcheck/pull/109) ([Arcanemagus](https://github.com/Arcanemagus))
 
 ## [v1.4.6](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.6) (2017-08-27)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.5...v1.4.6)
 
 **Fixed bugs:**
@@ -34,7 +45,6 @@
 - Ignore zsh files [\#102](https://github.com/AtomLinter/linter-shellcheck/pull/102) ([lucasdf](https://github.com/lucasdf))
 
 ## [v1.4.5](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.5) (2017-08-26)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.4...v1.4.5)
 
 **Implemented enhancements:**
@@ -48,7 +58,6 @@
 - Treat messages of level `note` as info [\#101](https://github.com/AtomLinter/linter-shellcheck/pull/101) ([lucasdf](https://github.com/lucasdf))
 
 ## [v1.4.4](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.4) (2017-03-18)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.3...v1.4.4)
 
 **Implemented enhancements:**
@@ -56,7 +65,6 @@
 - Update atom-linter to version 9.0.0 🚀 [\#92](https://github.com/AtomLinter/linter-shellcheck/pull/92) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
 
 ## [v1.4.3](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.3) (2017-01-11)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.2...v1.4.3)
 
 **Implemented enhancements:**
@@ -69,7 +77,6 @@
 - Remove stylesheet [\#91](https://github.com/AtomLinter/linter-shellcheck/pull/91) ([Arcanemagus](https://github.com/Arcanemagus))
 
 ## [v1.4.2](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.2) (2016-11-29)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.1...v1.4.2)
 
 **Implemented enhancements:**
@@ -78,7 +85,6 @@
 - Improve Atom's startup time [\#87](https://github.com/AtomLinter/linter-shellcheck/pull/87) ([walles](https://github.com/walles))
 
 ## [v1.4.1](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.1) (2016-09-26)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.4.0...v1.4.1)
 
 **Implemented enhancements:**
@@ -93,7 +99,6 @@
 - Error: Missing html/text field on Linter Response [\#74](https://github.com/AtomLinter/linter-shellcheck/issues/74)
 
 ## [v1.4.0](https://github.com/AtomLinter/linter-shellcheck/tree/v1.4.0) (2016-09-23)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.3.0...v1.4.0)
 
 **Fixed bugs:**
@@ -101,11 +106,9 @@
 - Error: Process exited with non-zero code: 1 [\#73](https://github.com/AtomLinter/linter-shellcheck/issues/73)
 
 ## [v1.3.0](https://github.com/AtomLinter/linter-shellcheck/tree/v1.3.0) (2016-09-23)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.2.1...v1.3.0)
 
 ## [v1.2.1](https://github.com/AtomLinter/linter-shellcheck/tree/v1.2.1) (2016-09-21)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.2.0...v1.2.1)
 
 **Implemented enhancements:**
@@ -115,7 +118,6 @@
 - Update atom-linter to version 6.0.0 🚀 [\#66](https://github.com/AtomLinter/linter-shellcheck/pull/66) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
 
 ## [v1.2.0](https://github.com/AtomLinter/linter-shellcheck/tree/v1.2.0) (2016-04-23)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.1.0...v1.2.0)
 
 **Implemented enhancements:**
@@ -132,7 +134,6 @@
 - atom-linter@4.3.0 untested ⚠️ [\#45](https://github.com/AtomLinter/linter-shellcheck/pull/45) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
 
 ## [v1.1.0](https://github.com/AtomLinter/linter-shellcheck/tree/v1.1.0) (2015-12-30)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.0.2...v1.1.0)
 
 **Implemented enhancements:**
@@ -148,23 +149,21 @@
 **Fixed bugs:**
 
 - Failed to load resource https://chewbacco-stuff.s3.amazonaws.com/donate.png [\#42](https://github.com/AtomLinter/linter-shellcheck/issues/42)
-- Update CSS selector for linter gutter element [\#29](https://github.com/AtomLinter/linter-shellcheck/issues/29)
 - Provide a default PATH for finding shellcheck [\#7](https://github.com/AtomLinter/linter-shellcheck/issues/7)
 - Set current working directory to current files folder [\#40](https://github.com/AtomLinter/linter-shellcheck/pull/40) ([andyshinn](https://github.com/andyshinn))
 - Add default to userParameters so trim doesn't barf [\#39](https://github.com/AtomLinter/linter-shellcheck/pull/39) ([andyshinn](https://github.com/andyshinn))
 - Fix inconsistent indentation style issue. [\#36](https://github.com/AtomLinter/linter-shellcheck/pull/36) ([lexicalunit](https://github.com/lexicalunit))
 
 ## [v1.0.2](https://github.com/AtomLinter/linter-shellcheck/tree/v1.0.2) (2015-09-30)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.0.1...v1.0.2)
 
 **Fixed bugs:**
 
+- Update CSS selector for linter gutter element [\#29](https://github.com/AtomLinter/linter-shellcheck/issues/29)
 - Object.activate is deprecated. [\#18](https://github.com/AtomLinter/linter-shellcheck/issues/18)
 - Upcoming linter changes [\#17](https://github.com/AtomLinter/linter-shellcheck/issues/17)
 
 ## [v1.0.1](https://github.com/AtomLinter/linter-shellcheck/tree/v1.0.1) (2015-08-09)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v1.0.0...v1.0.1)
 
 **Implemented enhancements:**
@@ -172,7 +171,6 @@
 - enable lintonfly, current code is now piped to process [\#22](https://github.com/AtomLinter/linter-shellcheck/pull/22) ([Project0](https://github.com/Project0))
 
 ## [v1.0.0](https://github.com/AtomLinter/linter-shellcheck/tree/v1.0.0) (2015-08-09)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v0.0.8...v1.0.0)
 
 **Implemented enhancements:**
@@ -185,7 +183,6 @@
 - Package.activateConfig is deprecated. [\#11](https://github.com/AtomLinter/linter-shellcheck/issues/11)
 
 ## [v0.0.8](https://github.com/AtomLinter/linter-shellcheck/tree/v0.0.8) (2015-05-21)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v0.0.7...v0.0.8)
 
 **Fixed bugs:**
@@ -194,11 +191,9 @@
 - Fix deprecations [\#15](https://github.com/AtomLinter/linter-shellcheck/pull/15) ([lee-dohm](https://github.com/lee-dohm))
 
 ## [v0.0.7](https://github.com/AtomLinter/linter-shellcheck/tree/v0.0.7) (2015-02-18)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v0.0.6...v0.0.7)
 
 ## [v0.0.6](https://github.com/AtomLinter/linter-shellcheck/tree/v0.0.6) (2014-08-13)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v0.0.5...v0.0.6)
 
 **Fixed bugs:**
@@ -206,11 +201,9 @@
 - Not yet ready? [\#1](https://github.com/AtomLinter/linter-shellcheck/issues/1)
 
 ## [v0.0.5](https://github.com/AtomLinter/linter-shellcheck/tree/v0.0.5) (2014-05-20)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v0.0.4...v0.0.5)
 
 ## [v0.0.4](https://github.com/AtomLinter/linter-shellcheck/tree/v0.0.4) (2014-05-20)
-
 [Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/v0.0.3...v0.0.4)
 
 **Fixed bugs:**
@@ -218,9 +211,6 @@
 - Shellcheck implementation [\#2](https://github.com/AtomLinter/linter-shellcheck/pull/2) ([kitch](https://github.com/kitch))
 
 ## [v0.0.3](https://github.com/AtomLinter/linter-shellcheck/tree/v0.0.3) (2014-05-12)
-
-[Full Changelog](https://github.com/AtomLinter/linter-shellcheck/compare/6db2a9f20b0eeb73341f319b9e637d05f3bb3a5e...v0.0.3)
-
 
 
 \* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*

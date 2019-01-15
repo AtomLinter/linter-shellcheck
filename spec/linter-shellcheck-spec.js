@@ -34,17 +34,17 @@ describe('The ShellCheck provider for Linter', () => {
   });
 
   it('handles messages from ShellCheck', async () => {
-    const expectedMsg = 'Tips depend on target shell and yours is unknown. Add a shebang. ' +
-      '[<a href="https://github.com/koalaman/shellcheck/wiki/SC2148">SC2148</a>]';
+    const expectedExcerpt = 'Tips depend on target shell and yours is unknown. Add a shebang. [SC2148]';
+    const expectedURL = 'https://github.com/koalaman/shellcheck/wiki/SC2148';
     const editor = await atom.workspace.open(badPath);
     const messages = await lint(editor);
 
     expect(messages.length).toBe(1);
-    expect(messages[0].type).toBe('error');
-    expect(messages[0].text).not.toBeDefined();
-    expect(messages[0].html).toBe(expectedMsg);
-    expect(messages[0].filePath).toBe(badPath);
-    expect(messages[0].range).toEqual([[0, 0], [0, 4]]);
+    expect(messages[0].severity).toBe('error');
+    expect(messages[0].excerpt).toBe(expectedExcerpt);
+    expect(messages[0].url).toBe(expectedURL);
+    expect(messages[0].location.file).toBe(badPath);
+    expect(messages[0].location.position).toEqual([[0, 0], [0, 4]]);
   });
 
   describe('implements useProjectCwd and', () => {
@@ -65,7 +65,7 @@ describe('The ShellCheck provider for Linter', () => {
       const editor = await atom.workspace.open(sourceFileRelativePath);
       const messages = await lint(editor);
       expect(messages.length).toBe(1);
-      expect(messages[0].html).toMatch(/openBinaryFile: does not exist/);
+      expect(messages[0].excerpt).toMatch(/openBinaryFile: does not exist/);
     });
 
     it('uses project-relative source= directives via setting (based at fixtures/)', async () => {
@@ -80,7 +80,7 @@ describe('The ShellCheck provider for Linter', () => {
       const editor = await atom.workspace.open(sourceProjectRelativePath);
       const messages = await lint(editor);
       expect(messages.length).toBe(1);
-      expect(messages[0].html).toMatch(/openBinaryFile: does not exist/);
+      expect(messages[0].excerpt).toMatch(/openBinaryFile: does not exist/);
     });
   });
 });

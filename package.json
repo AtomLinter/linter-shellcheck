@@ -71,7 +71,7 @@
     }
   },
   "package-deps": [
-    "linter"
+    "linter:2.0.0"
   ],
   "providedServices": {
     "linter": {

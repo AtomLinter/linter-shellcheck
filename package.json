@@ -2,6 +2,7 @@
   "name": "linter-shellcheck",
   "main": "./lib/main.js",
   "version": "1.6.0",
+  "private": true,
   "description": "Lint Bash on the fly, using shellcheck",
   "repository": "https://github.com/AtomLinter/linter-shellcheck",
   "license": "MIT",
@@ -69,6 +70,21 @@
     "globals": {
       "atom": true
     }
+  },
+  "renovate": {
+    "extends": [
+      "config:base"
+    ],
+    "semanticCommits": true,
+    "rangeStrategy": "pin",
+    "packageRules": [
+      {
+        "packagePatterns": [
+          "^eslint"
+        ],
+        "groupName": "ESLint packages"
+      }
+    ]
   },
   "package-deps": [
     "linter:2.0.0"
